@@ -1,10 +1,10 @@
 # sorting algorithms projects
 
-Tasks
+ Tasks
 
--making selection sort algorithm
--making bubble sort algorithm
--making merge sort algorithm
+ -making selection sort algorithm
+ -making bubble sort algorithm
+ -making merge sort algorithm
 
  and other programs concerning sorting algorithms
 
