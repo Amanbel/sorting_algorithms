@@ -13,7 +13,8 @@ void bubble_sort(int *array, size_t size)
 {
 	unsigned int i;
 	unsigned int j;
-	int val = NULL;
+	int val;
+	int m = 0;
 	unsigned int k;
 
 	for (i = 0; i < size; i++)
@@ -25,6 +26,7 @@ void bubble_sort(int *array, size_t size)
 				val = array[j];
 				array[j] = array[j + 1];
 				array[j + 1] = val;
+				m = 1;
 			}
 			for (k = 0; k < size; k++)
 			{
@@ -36,7 +38,7 @@ void bubble_sort(int *array, size_t size)
 			}
 			putchar('\n');
 		}
-		if (val != NULL)
+		if (m == 0)
 		{
 			break;
 		}
