@@ -2,8 +2,8 @@
 
  Tasks
 
- -making selection sort algorithm
- -making bubble sort algorithm
+ -making selection sort algorithm \n
+ -making bubble sort algorithm \n
  -making merge sort algorithm
 
  and other programs concerning sorting algorithms
