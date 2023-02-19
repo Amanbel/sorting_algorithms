@@ -14,11 +14,12 @@ void bubble_sort(int *array, size_t size)
 	unsigned int i;
 	unsigned int j;
 	int val;
-	int m = 0;
+	int m;
 	unsigned int k;
 
 	for (i = 0; i < size; i++)
 	{
+		m = 0;
 		for (j = 0; j <= size - 2; j++)
 		{
 			if (array[j] > array[j + 1])
@@ -27,16 +28,16 @@ void bubble_sort(int *array, size_t size)
 				array[j] = array[j + 1];
 				array[j + 1] = val;
 				m = 1;
-			}
-			for (k = 0; k < size; k++)
-			{
-				printf("%d", array[k]);
-				if (k != size - 1)
+				for (k = 0; k < size; k++)
 				{
-					printf(", ");
+					printf("%d", array[k]);
+					if (k != size - 1)
+					{
+						printf(", ");
+					}
 				}
+				putchar('\n');
 			}
-			putchar('\n');
 		}
 		if (m == 0)
 		{
