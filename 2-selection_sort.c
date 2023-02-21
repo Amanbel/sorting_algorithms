@@ -15,7 +15,7 @@ void selection_sort(int *array, size_t size)
 	unsigned int i;
 	unsigned int j;
 	int small;
-	int m = -1;
+	int m;
 	int val;
 
 	if (size < 2)
@@ -23,6 +23,7 @@ void selection_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 	{
+		m = i;
 		small = array[i];
 		for (j = i + 1; j < size; j++)
 		{
@@ -32,7 +33,7 @@ void selection_sort(int *array, size_t size)
 				m = j;
 			}
 		}
-		if (m >= 0)
+		if (m != i)
 		{
 			val = array[i];
 			array[i] = small;
