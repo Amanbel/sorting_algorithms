@@ -3,7 +3,7 @@
 #include "sort.h"
 
 /**
- * selection_sort - a function that uses selection sort 
+ * selection_sort - a function that uses selection sort
  * algorithm to sort an array
  * @array: array given by the user
  * @size: size of the given array
