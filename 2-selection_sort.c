@@ -18,7 +18,7 @@ void selection_sort(int *array, size_t size)
 	int m = -1;
 	int val;
 
-	if (array == NULL || size < 2)
+	if (size < 2)
 		return;
 
 	for (i = 0; i < size; i++)
@@ -39,7 +39,5 @@ void selection_sort(int *array, size_t size)
 			array[m] = val;
 			print_array(array, size);
 		}
-		else
-			break;
 	}
 }
