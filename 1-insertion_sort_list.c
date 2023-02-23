@@ -27,7 +27,7 @@ listint_t *swap_func(listint_t *a, listint_t *b, listint_t **list)
 }
 
 /**
- * insertion_sort - sorts the given doubly linked list
+ * insertion_sort_list - sorts the given doubly linked list
  * @list: user input of a doubly linked list
  * Return: Nothing
  */
