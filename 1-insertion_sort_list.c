@@ -11,7 +11,7 @@
  * to the left most side
  */
 
-listint_t *swap_func(listint_t *a, *b, listint_t **list)
+listint_t *swap_func(listint_t *a, listint_t *b, listint_t **list)
 {
 	if (a->prev)
 		(a->prev)->next = b;
@@ -32,7 +32,7 @@ listint_t *swap_func(listint_t *a, *b, listint_t **list)
  * Return: Nothing
  */
 
-void insertion_sort(listint_t **list)
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *ptr;
 	listint_t *left, *right;
@@ -54,6 +54,5 @@ void insertion_sort(listint_t **list)
 			left = right->prev;
 		}
 		ptr = ptr->next;
-		right = right->next;
 	}
 }
