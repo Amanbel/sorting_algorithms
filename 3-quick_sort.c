@@ -23,6 +23,7 @@ void quick_sort(int *array, size_t size)
  * @arr: array input
  * @l: left most part of the array
  * @r: right most part of the array
+ * @n: size of the user inputed array
  * Return: Nothing
  */
 
@@ -69,7 +70,7 @@ int partition(int *arr, int l, int r)
 
 	for (j = l; j < r; j++)
 	{
-		if (arr[j] <= pivot)
+		if (arr[j] < pivot)
 		{
 			swap(&arr[j], &arr[i]);
 			i++;
