@@ -29,10 +29,8 @@ void swap(int *a, int *b)
 
 void shell_sort(int *array, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int n;
-	unsigned int m;
+	unsigned int i, j, n;
+	int val;
 
 	if (array == NULL || size < 2)
 		return;
@@ -47,14 +45,14 @@ void shell_sort(int *array, size_t size)
 	{
 		for (i = n; i < size; i++)
 		{
+			val = array[i];
 			j = i;
-			m = i;
-			while (j >= n && array[j - n] > array[m])
+			while (j >= n && array[j - n] > val)
 			{
-				swap(&array[j - n], &array[m]);
-				j = j - n;
-				m--;
+				array[j] = array[j - n];
+				j -= n;
 			}
+			array[j] = val;
 		}
 		print_array(array, size);
 		n /= 3;
