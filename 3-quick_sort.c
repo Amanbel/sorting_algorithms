@@ -43,12 +43,15 @@ void quick_recur(int *arr, int l, int r, size_t n)
  * swap - swaps two elements
  * @a: element one
  * @b: element two
+ * @arr: inpput array
+ * @n: input array size
  * Return: Nothing
  */
 
 void swap(int *arr, size_t n, int *a, int *b)
 {
 	int temp;
+
 	if (*a == *b)
 		return;
 	temp = *a;
@@ -62,6 +65,7 @@ void swap(int *arr, size_t n, int *a, int *b)
  * @l: left most side of the array
  * @r: right most side of the array
  * @arr: the whole array
+ * @n: size of the array
  * Return: the index of the pivot
  */
 
