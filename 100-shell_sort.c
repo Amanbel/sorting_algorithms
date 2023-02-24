@@ -31,8 +31,12 @@ void shell_sort(int *array, size_t size)
 {
 	unsigned int i;
 	unsigned int j;
-	unsigned int n = 1;
+	unsigned int n;
 	unsigned int m;
+	
+	if (array == NULL || size < 2)
+		return;
+	n = 1;
 
 	while (n < size)
 	{
