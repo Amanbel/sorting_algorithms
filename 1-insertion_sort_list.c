@@ -40,11 +40,11 @@ void insertion_sort_list(listint_t **list)
 	if (!list || !(*list) || !(*list)->next)
 		return;
 
-	ptr = *list;
+	ptr = (*list)->next;
 	while (ptr)
 	{
-		left = ptr;
-		right = ptr->next;
+		left = ptr->prev;
+		right = ptr;
 		while (right->prev && right->n < left->n)
 		{
 			ptr = swap_func(left, right, list);
