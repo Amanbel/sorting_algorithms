@@ -3,8 +3,8 @@
 #include "sort.h"
 
 void quick_recur(int *arr, int l, int r, size_t n);
-void swap(int *a, int *b);
-int partition(int *arr, int l, int r);
+void swap(int *arr, size_t n, int *a, int *b);
+int partition(int *arr, int l, int r, size_t n);
 
 /**
  * quick_sort - algorithm that uses recursion to sort integers
@@ -33,8 +33,7 @@ void quick_recur(int *arr, int l, int r, size_t n)
 
 	if (l < r)
 	{
-		p = partition(arr, l, r);
-		print_array(arr, n);
+		p = partition(arr, l, r, n);
 		quick_recur(arr, l, p - 1, n);
 		quick_recur(arr, p + 1, r, n);
 	}
@@ -47,11 +46,15 @@ void quick_recur(int *arr, int l, int r, size_t n)
  * Return: Nothing
  */
 
-void swap(int *a, int *b)
+void swap(int *arr, size_t n, int *a, int *b)
 {
-	int temp = *a;
+	int temp;
+	if (*a == *b)
+		return;
+	temp = *a;
 	*a = *b;
 	*b = temp;
+	print_array(arr, n);
 }
 
 /**
@@ -62,7 +65,7 @@ void swap(int *a, int *b)
  * Return: the index of the pivot
  */
 
-int partition(int *arr, int l, int r)
+int partition(int *arr, int l, int r, size_t n)
 {
 	int pivot = arr[r];
 	int i = l;
@@ -72,10 +75,10 @@ int partition(int *arr, int l, int r)
 	{
 		if (arr[j] < pivot)
 		{
-			swap(&arr[j], &arr[i]);
+			swap(arr, n, &arr[j], &arr[i]);
 			i++;
 		}
 	}
-	swap(&arr[i], &arr[r]);
+	swap(arr, n, &arr[i], &arr[r]);
 	return (i);
 }
