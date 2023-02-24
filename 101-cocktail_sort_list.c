@@ -77,7 +77,7 @@ void cocktail_sort_list(listint_t **list)
 			{
 				swap(head, head->next);
 				swaped++;
-				if (head->prev == NULL)
+				if (head->prev->prev == NULL)
 					*list = head->prev;
 				print_list(*list);
 			}
