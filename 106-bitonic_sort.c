@@ -8,6 +8,7 @@
  * @r2: Final range
  * Return: Nothing
  */
+
 void printcheck(int *array, int r1, int r2)
 {
 	int i;
@@ -20,6 +21,7 @@ void printcheck(int *array, int r1, int r2)
 	}
 	printf("\n");
 }
+
 /**
  * _swap - swap two elements in an array
  * @array: THe array to change the values
@@ -28,6 +30,7 @@ void printcheck(int *array, int r1, int r2)
  * @dir: Direction of the array
  * Return: Nothing
  */
+
 void _swap(int *array, int i, int j, int dir)
 {
 	int tmp;
@@ -39,6 +42,7 @@ void _swap(int *array, int i, int j, int dir)
 		array[j] = tmp;
 	}
 }
+
 /**
  * bitonic_merge - swap the elements to sort
  * @array: Array to sort
@@ -48,6 +52,7 @@ void _swap(int *array, int i, int j, int dir)
  * @r_size: The size of the all array
  * Return: Nothing
  */
+
 void bitonic_merge(int *array, int low, int size, int dir, const int r_size)
 {
 	int k = size, i = low;
@@ -63,6 +68,7 @@ void bitonic_merge(int *array, int low, int size, int dir, const int r_size)
 		bitonic_merge(array, low + k, k, dir, r_size);
 	}
 }
+
 /**
  * _sort - segmentate the array
  * @array: The array to sort
@@ -72,6 +78,7 @@ void bitonic_merge(int *array, int low, int size, int dir, const int r_size)
  * @r_size: The size of the all array
  * Return: Nothing
  */
+
 void _sort(int *array, int low, int size, int dir, const int r_size)
 {
 	int k = size;
@@ -102,12 +109,14 @@ void _sort(int *array, int low, int size, int dir, const int r_size)
 		}
 	}
 }
+
 /**
  * bitonic_sort - call the sort function
  * @array: The array to sort
  * @size: Size of the array
  * Return: Nothing
  */
+
 void bitonic_sort(int *array, size_t size)
 {
 	int up = 1;
