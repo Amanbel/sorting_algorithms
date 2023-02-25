@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "sort.h"
 
-void swap(int *a, int *b)'
+void swap(int *a, int *b);
 void max_heapify(int *array, size_t size, size_t base, size_t root);
 
 /**
@@ -17,7 +17,7 @@ void swap(int *a, int *b)
 	int tmp = *a;
 
 	*a = *b;
-	*b = temp;
+	*b = tmp;
 }
 
 /**
